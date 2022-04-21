@@ -14,6 +14,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -50,6 +52,9 @@ public class VirusDataService
             int prevDayConfirmedCases = Integer.parseInt(csvRecord.get(csvRecord.size() - 2));
             location.setDelta(location.getLatestConfirmedCases() - prevDayConfirmedCases);
             newStats.add(location);
+            if (location.getCountry().equals("Ukraine")) {
+                Collections.swap(newStats, newStats.size()-1, 0);
+            }
         }
         this.allStats = newStats;
     }
