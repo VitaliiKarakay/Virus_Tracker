@@ -10,6 +10,7 @@
     </parent>
     <groupId>com.vkarakay</groupId>
     <artifactId>VirusTracker</artifactId>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>Virus Tracker</name>
     <description>Virus Tracker</description>

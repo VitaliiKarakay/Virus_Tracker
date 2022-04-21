@@ -26,5 +26,4 @@ public class MainController {
         model.addAttribute("totalReportedCases", totalReportedCases);
         return "home";
     }
-
 }
